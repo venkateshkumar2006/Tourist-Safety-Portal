@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="user-portal-container">
+        <div id="admin-sos-alert" class="admin-sos-alert">
+            Admin has sent an emergency alert to you!
+        </div>
+        <h1>Access Approved! 👋</h1>
+        <div class="details-container">
+            <p><strong>Username:</strong> <span id="username-display"></span></p>
+            <p><strong>Request Time:</strong> <span id="request-time-display"></span></p>
+            <p><strong>Approved Time:</strong> <span id="approved-time-display"></span></p>
+            <p><strong>Random ID:</strong> <span id="random-id-display"></span></p>
+        </div>
+        <div class="button-group">
+            <button id="sos-btn" class="sos-button">SOS</button>
+            <button id="logout-btn" class="logout-button">Logout</button>
+        </div>
+        <small id="location-status"></small>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

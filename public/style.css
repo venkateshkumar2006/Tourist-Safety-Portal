@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* General Body and Container Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8; /* Soft, light blue-gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #334e68;
+}
+
+.admin-portal-container,
+.user-portal-container {
+    background-color: #ffffff; /* Clean white containers */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Soft, subtle shadow */
+    width: 95%;
+    max-width: 1100px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Header Styling */
+.admin-header {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: #007bff; /* Primary blue color */
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #334e68;
+}
+
+.sub-title {
+    font-size: 14px;
+    color: #728292;
+}
+
+.header-logout {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red for logout */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.header-logout:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Login Page Specific Styling */
+.login-page {
+    max-width: 450px;
+    padding: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.login-page h1 {
+    color: #007bff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.login-page label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #526c85;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login-page input[type="text"],
+.login-page input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d9e6;
+    background-color: #f8f9fa;
+    color: #334e68;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-page input[type="text"]:focus,
+.login-page input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.login-page button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-page button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#message {
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+/* Tab Navigation Styling (for admin page) */
+.admin-tabs {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.tab-button {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #728292;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+.tab-button:hover {
+    background-color: #f0f4f8;
+}
+
+.tab-button.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    font-weight: 600;
+    background-color: #f0f4f8;
+}
+
+.tab-button.active span,
+.tab-button.active i {
+    color: #007bff;
+}
+
+.tab-button i {
+    font-size: 16px;
+}
+
+/* Tab Content Styling (for admin page) */
+.tab-content.hidden {
+    display: none;
+}
+
+.tab-content h2 {
+    color: #334e68;
+    font-size: 24px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+
+.tab-content p {
+    color: #728292;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.requests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requests-list li {
+    background-color: #f8f9fa; /* Light card background */
+    border: 1px solid #e0e6ed;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.requests-list li:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.requests-list li strong {
+    font-size: 16px;
+    color: #334e68;
+}
+
+.requests-list li small {
+    color: #728292;
+}
+
+/* Action Buttons (for admin page) */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.action-buttons .accept-btn {
+    background-color: #28a745; /* Green for accept */
+    color: white;
+}
+
+.action-buttons .accept-btn:hover {
+    background-color: #218838;
+}
+
+.action-buttons .reject-btn {
+    background-color: #dc3545; /* Red for reject */
+    color: white;
+}
+
+.action-buttons .reject-btn:hover {
+    background-color: #c82333;
+}
+
+.action-buttons .logout-btn {
+    background-color: #fd7e14; /* Orange for logout */
+    color: white;
+}
+
+.action-buttons .logout-btn:hover {
+    background-color: #e86400;
+}
+
+.action-buttons .admin-sos-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-buttons .admin-sos-btn:hover {
+    background-color: #c82333;
+}
+
+/* SOS Request Highlighting (for admin page) */
+.sos-request-item {
+    background-color: #fff3cd !important;
+    border-left: 5px solid #ffc107 !important;
+    animation: pulse-border 1.5s infinite;
+}
+
+@keyframes pulse-border {
+    0% { border-left-color: #ffc107; }
+    50% { border-left-color: #ff9800; }
+    100% { border-left-color: #ffc107; }
+}
+
+.empty-state {
+    text-align: center;
+    color: #aeb4be;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+/* User Portal Styles */
+.user-portal-container {
+    text-align: center;
+}
+
+.user-portal-container h1 {
+    color: #007bff;
+}
+
+.details-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.details-container p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #526c85;
+}
+
+.details-container strong {
+    color: #334e68;
+}
+
+.button-group {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.sos-button, .logout-button {
+    padding: 12px 25px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.sos-button {
+    background-color: #dc3545; /* Red for SOS */
+}
+
+.sos-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.logout-button {
+    background-color: #fd7e14; /* Orange logout */
+}
+
+.logout-button:hover {
+    background-color: #e86400;
+    transform: scale(1.05);
+}
+
+.admin-sos-alert {
+    background-color: #dc3545;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.map-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.map-link:hover {
+    background-color: #0056b3;
+}

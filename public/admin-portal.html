@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="header-left">
+            <i class="fas fa-shield-alt logo-icon"></i>
+            <div class="header-title">
+                <div class="main-title">Admin Dashboard</div>
+                <div class="sub-title">Tourist Safety Portal</div>
+            </div>
+        </div>
+        <button id="admin-logout-btn" class="logout-button header-logout">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </header>
+
+    <div class="admin-portal-container">
+        <div class="admin-tabs" id="admin-tabs-container">
+            <button class="tab-button active" data-tab="pending">
+                <i class="fas fa-hourglass-half"></i> Pending (<span id="pending-count">0</span>)
+            </button>
+            <button class="tab-button" data-tab="accepted">
+                <i class="fas fa-user-check"></i> Accepted (<span id="accepted-count">0</span>)
+            </button>
+            <button class="tab-button" data-tab="rejected">
+                <i class="fas fa-user-times"></i> Rejected (<span id="rejected-count">0</span>)
+            </button>
+            <button class="tab-button" data-tab="logged_out">
+                <i class="fas fa-sign-out-alt"></i> Logged Out (<span id="logged-out-count">0</span>)
+            </button>
+            <button class="tab-button" data-tab="sos">
+                <i class="fas fa-exclamation-triangle"></i> SOS (<span id="sos-count">0</span>)
+            </button>
+        </div>
+
+        <div id="pending" class="tab-content">
+            <h2>Pending Access Requests</h2>
+            <p>Review and approve or reject user access requests</p>
+            <ul id="pending-list" class="requests-list"></ul>
+        </div>
+
+        <div id="accepted" class="tab-content hidden">
+            <h2>Accepted Access Requests</h2>
+            <p>Monitor and manage currently active users</p>
+            <ul id="accepted-list" class="requests-list"></ul>
+        </div>
+        
+        <div id="rejected" class="tab-content hidden">
+            <h2>Rejected Access Requests</h2>
+            <p>List of all users who have been rejected</p>
+            <ul id="rejected-list" class="requests-list"></ul>
+        </div>
+        
+        <div id="logged_out" class="tab-content hidden">
+            <h2>Logged Out Users</h2>
+            <p>List of all users who have been logged out</p>
+            <ul id="logged-out-list" class="requests-list"></ul>
+        </div>
+
+        <div id="sos" class="tab-content hidden">
+            <h2>SOS Requests</h2>
+            <p>Urgent alerts from users in distress</p>
+            <ul id="sos-list" class="requests-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
